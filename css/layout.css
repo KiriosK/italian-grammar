@@ -1,0 +1,265 @@
+/* ============================================
+   LAYOUT — Sidebar + Content Area
+   ============================================ */
+
+/* --- Page wrapper --- */
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Sidebar --- */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  transition: transform var(--transition);
+  overflow: hidden;
+}
+
+.sidebar__header {
+  padding: var(--space-6) var(--space-6) var(--space-4);
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+}
+
+.sidebar__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: var(--leading-tight);
+}
+
+.sidebar__subtitle {
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: var(--space-1);
+}
+
+.sidebar__nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) 0;
+}
+
+/* --- Nav groups --- */
+
+.nav-group {
+  margin-bottom: var(--space-2);
+}
+
+.nav-group__label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-6);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  cursor: default;
+}
+
+.nav-group__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nav-group--indicativo .nav-group__dot   { background: var(--mood-indicativo); }
+.nav-group--condizionale .nav-group__dot { background: var(--mood-condizionale); }
+.nav-group--congiuntivo .nav-group__dot  { background: var(--mood-congiuntivo); }
+.nav-group--imperativo .nav-group__dot   { background: var(--mood-imperativo); }
+.nav-group--forme .nav-group__dot        { background: var(--mood-forme); }
+.nav-group--compare .nav-group__dot      { background: var(--mood-compare); }
+.nav-group--accordo .nav-group__dot      { background: var(--mood-accordo); }
+
+/* --- Nav links --- */
+
+.nav-link {
+  display: block;
+  padding: var(--space-2) var(--space-6) var(--space-2) var(--space-10);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: all var(--transition);
+  border-left: 3px solid transparent;
+  line-height: 1.4;
+}
+
+.nav-link:hover {
+  color: var(--color-text);
+  background: var(--color-bg-alt);
+}
+
+.nav-link.active {
+  color: var(--color-text);
+  font-weight: 600;
+  background: var(--color-bg-alt);
+}
+
+.nav-group--indicativo .nav-link.active   { border-left-color: var(--mood-indicativo); color: var(--mood-indicativo); }
+.nav-group--condizionale .nav-link.active { border-left-color: var(--mood-condizionale); color: var(--mood-condizionale); }
+.nav-group--congiuntivo .nav-link.active  { border-left-color: var(--mood-congiuntivo); color: var(--mood-congiuntivo); }
+.nav-group--imperativo .nav-link.active   { border-left-color: var(--mood-imperativo); color: var(--mood-imperativo); }
+.nav-group--forme .nav-link.active        { border-left-color: var(--mood-forme); color: var(--mood-forme); }
+.nav-group--compare .nav-link.active      { border-left-color: var(--mood-compare); color: var(--mood-compare); }
+.nav-group--accordo .nav-link.active      { border-left-color: var(--mood-accordo); color: var(--mood-accordo); }
+
+/* --- Content area --- */
+
+.content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  min-width: 0;
+}
+
+.content__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-8) var(--space-20);
+}
+
+/* --- Hero --- */
+
+.hero {
+  text-align: center;
+  padding: var(--space-16) 0 var(--space-12);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: var(--space-12);
+}
+
+.hero__flag {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-4);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-4);
+}
+
+.hero__lead {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: var(--leading-loose);
+}
+
+/* --- Section --- */
+
+.section {
+  margin-bottom: var(--space-16);
+  scroll-margin-top: var(--space-8);
+}
+
+.section__header {
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--color-border-light);
+}
+
+.section__header h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.section__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  vertical-align: middle;
+}
+
+/* Badge colors per mood */
+.mood-indicativo .section__badge   { background: var(--mood-indicativo-bg); color: var(--mood-indicativo); }
+.mood-condizionale .section__badge { background: var(--mood-condizionale-bg); color: var(--mood-condizionale); }
+.mood-congiuntivo .section__badge  { background: var(--mood-congiuntivo-bg); color: var(--mood-congiuntivo); }
+.mood-imperativo .section__badge   { background: var(--mood-imperativo-bg); color: var(--mood-imperativo); }
+.mood-forme .section__badge        { background: var(--mood-forme-bg); color: var(--mood-forme); }
+.mood-compare .section__badge      { background: var(--mood-compare-bg); color: var(--mood-compare); }
+.mood-accordo .section__badge      { background: var(--mood-accordo-bg); color: var(--mood-accordo); }
+
+/* Section accent lines */
+.mood-indicativo .section__header   { border-bottom-color: var(--mood-indicativo-light); }
+.mood-condizionale .section__header { border-bottom-color: var(--mood-condizionale-light); }
+.mood-congiuntivo .section__header  { border-bottom-color: var(--mood-congiuntivo-light); }
+.mood-imperativo .section__header   { border-bottom-color: var(--mood-imperativo-light); }
+.mood-forme .section__header        { border-bottom-color: var(--mood-forme-light); }
+.mood-compare .section__header      { border-bottom-color: var(--mood-compare-light); }
+.mood-accordo .section__header      { border-bottom-color: var(--mood-accordo-light); }
+
+/* --- Mobile burger --- */
+
+.burger {
+  display: none;
+  position: fixed;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+}
+
+.burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 36, 32, 0.4);
+  z-index: 90;
+  backdrop-filter: blur(2px);
+}
+
+.overlay.active {
+  display: block;
+}

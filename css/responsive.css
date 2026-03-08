@@ -1,0 +1,151 @@
+/* ============================================
+   RESPONSIVE — Mobile & Tablet
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .content__inner {
+    padding: var(--space-8) var(--space-6) var(--space-16);
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: calc(var(--space-16) + 44px);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-4xl: 1.875rem;
+    --text-3xl: 1.5rem;
+    --text-2xl: 1.25rem;
+  }
+
+  .content__inner {
+    padding: var(--space-6) var(--space-4) var(--space-12);
+  }
+
+  .hero {
+    padding: calc(var(--space-12) + 44px) 0 var(--space-8);
+  }
+
+  .hero__lead {
+    font-size: var(--text-base);
+  }
+
+  .section {
+    margin-bottom: var(--space-10);
+  }
+
+  .tense-block {
+    margin-bottom: var(--space-8);
+  }
+
+  /* Table scroll hint */
+  .conj-table-wrap {
+    position: relative;
+  }
+
+  .conj-table {
+    font-size: var(--text-xs);
+  }
+
+  .conj-table thead th,
+  .conj-table td {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  /* Stack comparisons */
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .desc-block {
+    padding: var(--space-4);
+  }
+
+  .example-item {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .example-it {
+    font-size: var(--text-base);
+  }
+
+  .back-to-top {
+    bottom: var(--space-4);
+    right: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .content__inner {
+    padding: var(--space-4) var(--space-3) var(--space-10);
+  }
+
+  .conj-table {
+    font-size: 0.7rem;
+  }
+
+  .conj-table thead th,
+  .conj-table td {
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .note {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .summary-table {
+    font-size: var(--text-xs);
+  }
+
+  .summary-table thead th,
+  .summary-table td {
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+/* --- Print --- */
+
+@media print {
+  .sidebar,
+  .burger,
+  .overlay,
+  .back-to-top {
+    display: none !important;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .content__inner {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .section {
+    break-inside: avoid;
+  }
+
+  .conj-table,
+  .summary-table {
+    font-size: 9pt;
+  }
+}

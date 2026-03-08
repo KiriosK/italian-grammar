@@ -1,0 +1,90 @@
+/* ============================================
+   DESIGN TOKENS
+   Italian-inspired palette with mood color coding
+   ============================================ */
+
+:root {
+  /* --- Base palette --- */
+  --color-bg:          #FAF6F1;
+  --color-bg-alt:      #F3EDE4;
+  --color-surface:     #FFFFFF;
+  --color-text:        #2C2420;
+  --color-text-muted:  #7A6E64;
+  --color-text-light:  #A89B8F;
+  --color-border:      #E2D9CE;
+  --color-border-light:#EDE7DF;
+
+  /* --- Mood colors (наклонения) --- */
+  --mood-indicativo:       #2B6CB0;
+  --mood-indicativo-bg:    #EBF2FA;
+  --mood-indicativo-light: #BEE3F8;
+
+  --mood-congiuntivo:       #6B46C1;
+  --mood-congiuntivo-bg:    #F3EEFB;
+  --mood-congiuntivo-light: #D6BCFA;
+
+  --mood-condizionale:       #C05621;
+  --mood-condizionale-bg:    #FEF3EB;
+  --mood-condizionale-light: #FEEBC8;
+
+  --mood-imperativo:       #276749;
+  --mood-imperativo-bg:    #EDF7F0;
+  --mood-imperativo-light: #C6F6D5;
+
+  --mood-forme:       #718096;
+  --mood-forme-bg:    #F7FAFC;
+  --mood-forme-light: #E2E8F0;
+
+  --mood-compare:       #B7791F;
+  --mood-compare-bg:    #FFFBEB;
+  --mood-compare-light: #FEFCBF;
+
+  --mood-accordo:       #9B2C2C;
+  --mood-accordo-bg:    #FFF5F5;
+  --mood-accordo-light: #FED7D7;
+
+  /* --- Typography --- */
+  --font-display:  'Playfair Display', 'Georgia', serif;
+  --font-body:     'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-mono:     'JetBrains Mono', 'Fira Code', monospace;
+  --font-italian:  'Cormorant Garamond', 'Georgia', serif;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+
+  --leading-tight:  1.25;
+  --leading-normal: 1.6;
+  --leading-loose:  1.8;
+
+  /* --- Spacing --- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* --- Layout --- */
+  --sidebar-width:  280px;
+  --content-max:    820px;
+
+  /* --- Misc --- */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --shadow-sm:  0 1px 3px rgba(44, 36, 32, 0.06);
+  --shadow-md:  0 4px 12px rgba(44, 36, 32, 0.08);
+  --shadow-lg:  0 8px 30px rgba(44, 36, 32, 0.12);
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
