@@ -162,6 +162,10 @@
 .mood-condizionale .conj-table .end { color: var(--mood-condizionale); }
 .mood-imperativo .conj-table .end   { color: var(--mood-imperativo); }
 
+/* Stressed vowel — amber, always overrides .end mood color when nested */
+.stress,
+.conj-table .end .stress { color: #C6870A; font-weight: 700; }
+
 /* Compound tense table */
 .conj-table .aux {
   color: var(--color-text-light);
